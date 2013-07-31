@@ -1,0 +1,24 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html class="no-js" lang="da">
+    <head>
+        <link rel="stylesheet" href="/css/case.css" type="text/css" media="screen"/>
+    </head>
+    <body>
+    <h1>@CurrentPage.Name</h1>
+    <i>@Model.Content.Parent.Name</i>
+    <h3>@Umbraco.Field("teaser")</h3>
+    <p>
+        <p class="mainText">
+            @Umbraco.Field("content")
+        </p>
+        <p class="images">
+            @Html.Partial("renderImages", Model.Content)
+        </p>
+
+    </p>
+    </body>
+</html>

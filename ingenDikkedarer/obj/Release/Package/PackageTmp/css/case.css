@@ -1,0 +1,14 @@
+﻿body {
+    font-family: arial, helvetica, verdana;
+    overflow: hidden
+}
+
+ul.inline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.inline li {
+    display: inline
+}

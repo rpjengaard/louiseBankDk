@@ -1,0 +1,35 @@
+﻿@using umbraco.NodeFactory
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<louiseBank.Models.CasesResultView>
+@* render filter-categories *@
+@{
+    Node root = new Node(1084);
+    Nodes categories = root.Children;    
+    
+    <ul id="filters" class="inline">
+        <li>Filter: </li>
+        <li><a href="#" data-filter="*">Vis alle</a></li>
+            
+        @foreach (Node category in categories)
+        {
+            var classCat = ".cat" + category.Id;
+            <li><a href="#" data-filter="@classCat">@category.Name</a></li>
+        }
+    </ul>
+}
+<hr />
+@* render cases *@
+<div id="container">
+@foreach (var item in Model.Cases.OrderByDescending(x => x.Created))
+{
+    var catClass = "cat" + item.CategoryId;
+    
+    <div class="element @catClass" data-category="@item.CategoryId" style="border: solid 3px #ccc; margin: 5px">
+        <a class="various" data-fancybox-type="iframe" href="@item.Url">
+            @if (!string.IsNullOrEmpty(item.ImageUrl))
+            {
+                <img src="@item.ImageUrl"/><br />
+            }
+        </a>
+    </div>
+}
+</div>

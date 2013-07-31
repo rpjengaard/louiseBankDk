@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<IPublishedContent>
+
+@{
+    var root = Model.AncestorOrSelf(1);
+}
+<ul class="navn inline">
+    <li>Navigation: </li>
+    @foreach (var node in root.Children.Where(x => x.IsVisible()))
+    {
+        <li>
+            <a href="@node.Url">@node.Name</a>
+        </li>
+    }
+
+</ul>

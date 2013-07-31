@@ -1,0 +1,1013 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D1B0066-5F04-4862-ACC0-EFF647F66DFB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>louiseBank</RootNamespace>
+    <AssemblyName>louiseBank</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="businesslogic">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\businesslogic.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientDependency.Core">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\ClientDependency.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientDependency.Core.Mvc">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\ClientDependency.Core.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="cms">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\cms.dll</HintPath>
+    </Reference>
+    <Reference Include="controls">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\controls.dll</HintPath>
+    </Reference>
+    <Reference Include="CookComputing.XmlRpcV2">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\CookComputing.XmlRpcV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Eksponent.CropUp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Eksponent.CropUp.dll</HintPath>
+    </Reference>
+    <Reference Include="Examine">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\Examine.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="interfaces">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\packages\Lucene.Net.2.9.4.1\lib\net40\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Helpers">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\Microsoft.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.1\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniProfiler">
+      <HintPath>..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.6.4\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Our.Umbraco.uGoLive">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\Our.Umbraco.uGoLive.dll</HintPath>
+    </Reference>
+    <Reference Include="Our.Umbraco.uGoLive.47x">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\Our.Umbraco.uGoLive.47x.dll</HintPath>
+    </Reference>
+    <Reference Include="Our.Umbraco.uGoLive.Checks">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\Our.Umbraco.uGoLive.Checks.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLCE4Umbraco">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\SQLCE4Umbraco.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\System.Data.SqlServerCe.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="TidyNet">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\TidyNet.dll</HintPath>
+    </Reference>
+    <Reference Include="uComponents.Controls">
+      <HintPath>..\packages\uComponents.5.5.0\lib\net40\uComponents.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="uComponents.Core">
+      <HintPath>..\packages\uComponents.5.5.0\lib\net40\uComponents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="uComponents.DataTypes">
+      <HintPath>..\packages\uComponents.5.5.0\lib\net40\uComponents.DataTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="uComponents.Installer">
+      <HintPath>..\packages\uComponents.5.5.0\lib\net40\uComponents.Installer.dll</HintPath>
+    </Reference>
+    <Reference Include="uComponents.Legacy">
+      <HintPath>..\packages\uComponents.5.5.0\lib\net40\uComponents.Legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="uComponents.MacroEngines">
+      <HintPath>..\packages\uComponents.5.5.0\lib\net40\uComponents.MacroEngines.dll</HintPath>
+    </Reference>
+    <Reference Include="uComponents.Mapping">
+      <HintPath>..\packages\uComponents.5.5.0\lib\net40\uComponents.Mapping.dll</HintPath>
+    </Reference>
+    <Reference Include="uComponents.NotFoundHandlers">
+      <HintPath>..\packages\uComponents.5.5.0\lib\net40\uComponents.NotFoundHandlers.dll</HintPath>
+    </Reference>
+    <Reference Include="uComponents.UI">
+      <HintPath>..\packages\uComponents.5.5.0\lib\net40\uComponents.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="uComponents.XsltExtensions">
+      <HintPath>..\packages\uComponents.5.5.0\lib\net40\uComponents.XsltExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\umbraco.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Core">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\Umbraco.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.DataLayer">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\umbraco.DataLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.editorControls">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\umbraco.editorControls.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.MacroEngines">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\umbraco.MacroEngines.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.macroRenderings">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\umbraco.macroRenderings.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.providers">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\umbraco.providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Web.UI">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\Umbraco.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.XmlSerializers">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\umbraco.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="UmbracoExamine">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\UmbracoExamine.dll</HintPath>
+    </Reference>
+    <Reference Include="UrlRewritingNet.UrlRewriter">
+      <HintPath>..\packages\UmbracoCms.Core.6.1.2.2\lib\UrlRewritingNet.UrlRewriter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
+    <Content Include="bin\amd64\Microsoft.VC90.CRT\README_ENU.txt" />
+    <Content Include="bin\amd64\sqlceca40.dll" />
+    <Content Include="bin\amd64\sqlcecompact40.dll" />
+    <Content Include="bin\amd64\sqlceer40EN.dll" />
+    <Content Include="bin\amd64\sqlceme40.dll" />
+    <Content Include="bin\amd64\sqlceqp40.dll" />
+    <Content Include="bin\amd64\sqlcese40.dll" />
+    <Content Include="bin\x86\Microsoft.VC90.CRT\msvcr90.dll" />
+    <Content Include="bin\x86\Microsoft.VC90.CRT\README_ENU.txt" />
+    <Content Include="bin\x86\sqlceca40.dll" />
+    <Content Include="bin\x86\sqlcecompact40.dll" />
+    <Content Include="bin\x86\sqlceer40EN.dll" />
+    <Content Include="bin\x86\sqlceme40.dll" />
+    <Content Include="bin\x86\sqlceqp40.dll" />
+    <Content Include="bin\x86\sqlcese40.dll" />
+    <Content Include="css\case.css" />
+    <Content Include="css\fancybox\jquery.fancybox.css" />
+    <Content Include="css\style.css" />
+    <Content Include="default.aspx" />
+    <Content Include="img\fancybox\blank.gif" />
+    <Content Include="img\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="img\fancybox\fancybox_loading.gif" />
+    <Content Include="img\fancybox\fancybox_overlay.png" />
+    <Content Include="img\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="img\fancybox\fancybox_sprite.png" />
+    <Content Include="macroScripts\dummy.txt" />
+    <Content Include="masterpages\dummy.txt" />
+    <Content Include="media\dummy.txt" />
+    <Content Include="scripts\dummy.txt" />
+    <Content Include="scripts\plugins\jquery.fancybox.js" />
+    <Content Include="scripts\plugins\jquery.isotope.min.js" />
+    <Content Include="scripts\plugins\modernizr.custom.js" />
+    <Content Include="umbraco\Actions\delete.aspx" />
+    <Content Include="umbraco\Actions\editContent.aspx" />
+    <Content Include="umbraco\Actions\preview.aspx" />
+    <Content Include="umbraco\Actions\publish.aspx" />
+    <Content Include="umbraco\cacheBrowser.aspx" />
+    <Content Include="umbraco\canvas.aspx" />
+    <Content Include="umbraco\Channels\rsd.aspx" />
+    <Content Include="umbraco\Channels\wlwmanifest.aspx" />
+    <Content Include="umbraco\Config\Create\UI.xml" />
+    <Content Include="umbraco\Config\Lang\da.xml" />
+    <Content Include="umbraco\Config\Lang\de.xml" />
+    <Content Include="umbraco\Config\Lang\en.xml" />
+    <Content Include="umbraco\Config\Lang\en_us.xml" />
+    <Content Include="umbraco\Config\Lang\es.xml" />
+    <Content Include="umbraco\Config\Lang\fr.xml" />
+    <Content Include="umbraco\Config\Lang\he.xml" />
+    <Content Include="umbraco\Config\Lang\it.xml" />
+    <Content Include="umbraco\Config\Lang\ja.xml" />
+    <Content Include="umbraco\Config\Lang\ko.xml" />
+    <Content Include="umbraco\Config\Lang\nl.xml" />
+    <Content Include="umbraco\Config\Lang\no.xml" />
+    <Content Include="umbraco\Config\Lang\pl.xml" />
+    <Content Include="umbraco\Config\Lang\pt.xml" />
+    <Content Include="umbraco\Config\Lang\ru.xml" />
+    <Content Include="umbraco\Config\Lang\sv.xml" />
+    <Content Include="umbraco\Config\Lang\zh.xml" />
+    <Content Include="umbraco\Controls\ContentTypeControlNew.ascx" />
+    <Content Include="umbraco\Controls\GenericProperties\GenericProperty.ascx" />
+    <Content Include="umbraco\Controls\Images\ImageViewer.ascx" />
+    <Content Include="umbraco\Controls\Images\ImageViewer.js" />
+    <Content Include="umbraco\Controls\Images\ImageViewerUpdater.asmx" />
+    <Content Include="umbraco\Controls\Images\UploadMediaImage.ascx" />
+    <Content Include="umbraco\Controls\Images\UploadMediaImage.js" />
+    <Content Include="umbraco\Controls\passwordChanger.ascx" />
+    <Content Include="umbraco\Controls\ProgressBar.ascx" />
+    <Content Include="umbraco\Controls\Tree\CustomTreeService.asmx" />
+    <Content Include="umbraco\Controls\Tree\TreeControl.ascx" />
+    <Content Include="umbraco\create.aspx" />
+    <Content Include="umbraco\Create\content.ascx" />
+    <Content Include="umbraco\Create\DLRScripting.ascx" />
+    <Content Include="umbraco\Create\language.ascx" />
+    <Content Include="umbraco\Create\media.ascx" />
+    <Content Include="umbraco\Create\member.ascx" />
+    <Content Include="umbraco\Create\nodeType.ascx" />
+    <Content Include="umbraco\Create\PartialViewMacro.ascx" />
+    <Content Include="umbraco\Create\script.ascx" />
+    <Content Include="umbraco\Create\simple.ascx" />
+    <Content Include="umbraco\Create\xslt.ascx" />
+    <Content Include="umbraco\Css\background.gif" />
+    <Content Include="umbraco\Css\permissionsEditor.css" />
+    <Content Include="umbraco\Css\splitter.gif" />
+    <Content Include="umbraco\Css\umbLiveEditing.css" />
+    <Content Include="umbraco\Css\umbracoGui.css" />
+    <Content Include="umbraco\dashboard.aspx" />
+    <Content Include="umbraco\Dashboard\ChangePassword.ascx" />
+    <Content Include="umbraco\Dashboard\DesktopMediaUploader.ascx" />
+    <Content Include="umbraco\Dashboard\DeveloperDashboardIntro.ascx" />
+    <Content Include="umbraco\Dashboard\DeveloperDashboardVideos.ascx" />
+    <Content Include="umbraco\Dashboard\ExamineManagement.ascx" />
+    <Content Include="umbraco\Dashboard\FeedProxy.aspx" />
+    <Content Include="umbraco\Dashboard\Images\access-denied.png" />
+    <Content Include="umbraco\Dashboard\Images\contour-icon.png" />
+    <Content Include="umbraco\Dashboard\Images\courier-icon.png" />
+    <Content Include="umbraco\Dashboard\Images\dmu-badge.jpg" />
+    <Content Include="umbraco\Dashboard\Images\dmu.png" />
+    <Content Include="umbraco\Dashboard\Images\logo.gif" />
+    <Content Include="umbraco\Dashboard\Images\logo32x32.png" />
+    <Content Include="umbraco\Dashboard\Images\membersearch.png" />
+    <Content Include="umbraco\Dashboard\Images\starterkit-icon.png" />
+    <Content Include="umbraco\Dashboard\Images\starterkit32x32.png" />
+    <Content Include="umbraco\Dashboard\Images\TV.png" />
+    <Content Include="umbraco\Dashboard\Images\ZipFile.png" />
+    <Content Include="umbraco\Dashboard\LatestEdits.ascx" />
+    <Content Include="umbraco\Dashboard\MediaDashboardFolderBrowser.ascx" />
+    <Content Include="umbraco\Dashboard\MediaDashboardIntro.ascx" />
+    <Content Include="umbraco\Dashboard\MediaDashboardVideos.ascx" />
+    <Content Include="umbraco\Dashboard\MembersDashboardIntro.ascx" />
+    <Content Include="umbraco\Dashboard\MembersDashboardVideos.ascx" />
+    <Content Include="umbraco\Dashboard\Scripts\jquery.jfeed.pack.js" />
+    <Content Include="umbraco\Dashboard\Scripts\swfobject.js" />
+    <Content Include="umbraco\Dashboard\SettingsDashboardIntro.ascx" />
+    <Content Include="umbraco\Dashboard\SettingsDashboardVideos.ascx" />
+    <Content Include="umbraco\Dashboard\Settings\Applyskin.ascx" />
+    <Content Include="umbraco\Dashboard\StartupDashboardIntro.ascx" />
+    <Content Include="umbraco\Dashboard\StartupDashboardKits.ascx" />
+    <Content Include="umbraco\Dashboard\StartupDashboardVideos.ascx" />
+    <Content Include="umbraco\Dashboard\Swfs\AIRInstallBadge.swf" />
+    <Content Include="umbraco\Dashboard\Swfs\expressinstall.swf" />
+    <Content Include="umbraco\Default.aspx" />
+    <Content Include="umbraco\Developer\autoDoc.aspx" />
+    <Content Include="umbraco\Developer\Cache\viewCacheItem.aspx" />
+    <Content Include="umbraco\Developer\DataTypes\editDatatype.aspx" />
+    <Content Include="umbraco\Developer\Macros\assemblyBrowser.aspx" />
+    <Content Include="umbraco\Developer\Macros\editMacro.aspx" />
+    <Content Include="umbraco\Developer\Packages\BrowseRepository.aspx" />
+    <Content Include="umbraco\Developer\Packages\directoryBrowser.aspx" />
+    <Content Include="umbraco\Developer\Packages\editPackage.aspx" />
+    <Content Include="umbraco\Developer\Packages\installedPackage.aspx" />
+    <Content Include="umbraco\Developer\Packages\installer.aspx" />
+    <Content Include="umbraco\Developer\Packages\LoadNitros.ascx" />
+    <Content Include="umbraco\Developer\Packages\proxy.htm" />
+    <Content Include="umbraco\Developer\Packages\StarterKits.aspx" />
+    <Content Include="umbraco\Developer\Packages\SubmitPackage.aspx" />
+    <Content Include="umbraco\Developer\Python\editPython.aspx" />
+    <Content Include="umbraco\Developer\RelationTypes\EditRelationType.aspx" />
+    <Content Include="umbraco\Developer\RelationTypes\Images\Bidirectional.png" />
+    <Content Include="umbraco\Developer\RelationTypes\Images\ParentToChild.png" />
+    <Content Include="umbraco\Developer\RelationTypes\Images\Refresh.gif" />
+    <Content Include="umbraco\Developer\RelationTypes\NewRelationType.aspx" />
+    <Content Include="umbraco\Developer\RelationTypes\RelationTypesWebService.asmx" />
+    <Content Include="umbraco\Developer\RelationTypes\TreeMenu\ActionDeleteRelationType.js" />
+    <Content Include="umbraco\Developer\RelationTypes\TreeMenu\ActionNewRelationType.js" />
+    <Content Include="umbraco\Developer\Xslt\editXslt.aspx" />
+    <Content Include="umbraco\Developer\Xslt\getXsltStatus.asmx" />
+    <Content Include="umbraco\Developer\Xslt\xsltChooseExtension.aspx" />
+    <Content Include="umbraco\Developer\Xslt\xsltInsertValueOf.aspx" />
+    <Content Include="umbraco\Developer\Xslt\xsltVisualize.aspx" />
+    <Content Include="umbraco\Dialogs\about.aspx" />
+    <Content Include="umbraco\Dialogs\AssignDomain.aspx" />
+    <Content Include="umbraco\Dialogs\AssignDomain2.aspx" />
+    <Content Include="umbraco\Dialogs\create.aspx" />
+    <Content Include="umbraco\Dialogs\cruds.aspx" />
+    <Content Include="umbraco\Dialogs\EditMacro.aspx" />
+    <Content Include="umbraco\Dialogs\empty.htm" />
+    <Content Include="umbraco\Dialogs\emptyTrashcan.aspx" />
+    <Content Include="umbraco\Dialogs\exportDocumenttype.aspx" />
+    <Content Include="umbraco\Dialogs\imageViewer.aspx" />
+    <Content Include="umbraco\Dialogs\importDocumenttype.aspx" />
+    <Content Include="umbraco\Dialogs\insertMacro.aspx" />
+    <Content Include="umbraco\Dialogs\insertMasterpageContent.aspx" />
+    <Content Include="umbraco\Dialogs\insertMasterpagePlaceholder.aspx" />
+    <Content Include="umbraco\Dialogs\insertTable.aspx" />
+    <Content Include="umbraco\Dialogs\mediaPicker.aspx" />
+    <Content Include="umbraco\Dialogs\moveOrCopy.aspx" />
+    <Content Include="umbraco\Dialogs\notifications.aspx" />
+    <Content Include="umbraco\Dialogs\Preview.aspx" />
+    <Content Include="umbraco\Dialogs\protectPage.aspx" />
+    <Content Include="umbraco\Dialogs\publish.aspx" />
+    <Content Include="umbraco\Dialogs\RegexWs.aspx" />
+    <Content Include="umbraco\Dialogs\republish.aspx" />
+    <Content Include="umbraco\Dialogs\rollBack.aspx" />
+    <Content Include="umbraco\Dialogs\search.aspx" />
+    <Content Include="umbraco\Dialogs\SendPublish.aspx" />
+    <Content Include="umbraco\Dialogs\sendToTranslation.aspx" />
+    <Content Include="umbraco\Dialogs\sort.aspx" />
+    <Content Include="umbraco\Dialogs\TemplateSkinning.aspx" />
+    <Content Include="umbraco\Dialogs\treePicker.aspx" />
+    <Content Include="umbraco\Dialogs\umbracoField.aspx" />
+    <Content Include="umbraco\Dialogs\uploadImage.aspx" />
+    <Content Include="umbraco\Dialogs\viewAuditTrail.aspx" />
+    <Content Include="umbraco\editContent.aspx" />
+    <Content Include="umbraco\editMedia.aspx" />
+    <Content Include="umbraco\endPreview.aspx" />
+    <Content Include="umbraco\helpRedirect.aspx" />
+    <Content Include="umbraco\Images\aboutNew.png" />
+    <Content Include="umbraco\Images\Actions\sprites.png" />
+    <Content Include="umbraco\Images\arrawBack.gif" />
+    <Content Include="umbraco\Images\arrowDown.gif" />
+    <Content Include="umbraco\Images\arrowForward.gif" />
+    <Content Include="umbraco\Images\audit.png" />
+    <Content Include="umbraco\Images\back.png" />
+    <Content Include="umbraco\Images\blank.png" />
+    <Content Include="umbraco\Images\close.png" />
+    <Content Include="umbraco\Images\collapse.png" />
+    <Content Include="umbraco\Images\copy.small.png" />
+    <Content Include="umbraco\Images\cut.small.png" />
+    <Content Include="umbraco\Images\c_b.gif" />
+    <Content Include="umbraco\Images\c_bl.gif" />
+    <Content Include="umbraco\Images\c_bl_label.gif" />
+    <Content Include="umbraco\Images\c_br.gif" />
+    <Content Include="umbraco\Images\c_br_label.gif" />
+    <Content Include="umbraco\Images\c_b_label.gif" />
+    <Content Include="umbraco\Images\c_r.gif" />
+    <Content Include="umbraco\Images\c_t.gif" />
+    <Content Include="umbraco\Images\c_tl.gif" />
+    <Content Include="umbraco\Images\c_tr.gif" />
+    <Content Include="umbraco\Images\date.gif" />
+    <Content Include="umbraco\Images\delete.gif" />
+    <Content Include="umbraco\Images\delete.png" />
+    <Content Include="umbraco\Images\delete.small.png" />
+    <Content Include="umbraco\Images\delete_button.png" />
+    <Content Include="umbraco\Images\Developer\customControlIcon.png" />
+    <Content Include="umbraco\Images\Developer\pythonIcon.png" />
+    <Content Include="umbraco\Images\Developer\usercontrolIcon.png" />
+    <Content Include="umbraco\Images\Developer\xsltIcon.png" />
+    <Content Include="umbraco\Images\dialogBg.png" />
+    <Content Include="umbraco\Images\domain.gif" />
+    <Content Include="umbraco\Images\domain_on.png" />
+    <Content Include="umbraco\Images\download.png" />
+    <Content Include="umbraco\Images\Editor\anchor.gif" />
+    <Content Include="umbraco\Images\Editor\anchor.png" />
+    <Content Include="umbraco\Images\Editor\anchor_symbol.gif" />
+    <Content Include="umbraco\Images\Editor\backcolor.gif" />
+    <Content Include="umbraco\Images\Editor\Bold.GIF" />
+    <Content Include="umbraco\Images\Editor\bold_de_se.gif" />
+    <Content Include="umbraco\Images\Editor\bold_es.gif" />
+    <Content Include="umbraco\Images\Editor\bold_fr.gif" />
+    <Content Include="umbraco\Images\Editor\bold_ru.gif" />
+    <Content Include="umbraco\Images\Editor\bold_tw.gif" />
+    <Content Include="umbraco\Images\Editor\browse.gif" />
+    <Content Include="umbraco\Images\Editor\bullist.GIF" />
+    <Content Include="umbraco\Images\Editor\buttons.gif" />
+    <Content Include="umbraco\Images\Editor\button_menu.gif" />
+    <Content Include="umbraco\Images\Editor\calendar.gif" />
+    <Content Include="umbraco\Images\Editor\calendarButton.gif" />
+    <Content Include="umbraco\Images\Editor\cancel_button_bg.gif" />
+    <Content Include="umbraco\Images\Editor\Center.GIF" />
+    <Content Include="umbraco\Images\Editor\charmap.gif" />
+    <Content Include="umbraco\Images\Editor\cleanup.gif" />
+    <Content Include="umbraco\Images\Editor\close.gif" />
+    <Content Include="umbraco\Images\Editor\code.gif" />
+    <Content Include="umbraco\Images\Editor\color.gif" />
+    <Content Include="umbraco\Images\Editor\Copy.GIF" />
+    <Content Include="umbraco\Images\Editor\custom_1.gif" />
+    <Content Include="umbraco\Images\Editor\Cut.GIF" />
+    <Content Include="umbraco\Images\Editor\DeIndent.GIF" />
+    <Content Include="umbraco\Images\Editor\delcell.GIF" />
+    <Content Include="umbraco\Images\Editor\delcol.GIF" />
+    <Content Include="umbraco\Images\Editor\delrow.GIF" />
+    <Content Include="umbraco\Images\Editor\dezoom.gif" />
+    <Content Include="umbraco\Images\Editor\dictionaryItem.gif" />
+    <Content Include="umbraco\Images\Editor\doc.gif" />
+    <Content Include="umbraco\Images\Editor\documentType.gif" />
+    <Content Include="umbraco\Images\Editor\forecolor.gif" />
+    <Content Include="umbraco\Images\Editor\form.gif" />
+    <Content Include="umbraco\Images\Editor\formButton.gif" />
+    <Content Include="umbraco\Images\Editor\formCheckbox.gif" />
+    <Content Include="umbraco\Images\Editor\formHidden.gif" />
+    <Content Include="umbraco\Images\Editor\formRadio.gif" />
+    <Content Include="umbraco\Images\Editor\formSelect.gif" />
+    <Content Include="umbraco\Images\Editor\formText.gif" />
+    <Content Include="umbraco\Images\Editor\formTextarea.gif" />
+    <Content Include="umbraco\Images\Editor\fullscrn.GIF" />
+    <Content Include="umbraco\Images\Editor\help.gif" />
+    <Content Include="umbraco\Images\Editor\help.png" />
+    <Content Include="umbraco\Images\Editor\hr.gif" />
+    <Content Include="umbraco\Images\Editor\html.gif" />
+    <Content Include="umbraco\Images\Editor\image.GIF" />
+    <Content Include="umbraco\Images\Editor\indent.gif" />
+    <Content Include="umbraco\Images\Editor\inindent.GIF" />
+    <Content Include="umbraco\Images\Editor\insBreadcrum.gif" />
+    <Content Include="umbraco\Images\Editor\inscell.GIF" />
+    <Content Include="umbraco\Images\Editor\insChildTemplate.gif" />
+    <Content Include="umbraco\Images\Editor\insChildTemplateNew.gif" />
+    <Content Include="umbraco\Images\Editor\inscol.GIF" />
+    <Content Include="umbraco\Images\Editor\insert_button_bg.gif" />
+    <Content Include="umbraco\Images\Editor\insField.gif" />
+    <Content Include="umbraco\Images\Editor\insFieldByLevel.gif" />
+    <Content Include="umbraco\Images\Editor\insFieldByTree.gif" />
+    <Content Include="umbraco\Images\Editor\insform.gif" />
+    <Content Include="umbraco\Images\Editor\inshtml.GIF" />
+    <Content Include="umbraco\Images\Editor\insMacro.gif" />
+    <Content Include="umbraco\Images\Editor\insMacroSB.png" />
+    <Content Include="umbraco\Images\Editor\insMemberItem.gif" />
+    <Content Include="umbraco\Images\Editor\insRazorMacro.png" />
+    <Content Include="umbraco\Images\Editor\insrow.GIF" />
+    <Content Include="umbraco\Images\Editor\instable.GIF" />
+    <Content Include="umbraco\Images\Editor\Italic.GIF" />
+    <Content Include="umbraco\Images\Editor\italic_de_se.gif" />
+    <Content Include="umbraco\Images\Editor\italic_es.gif" />
+    <Content Include="umbraco\Images\Editor\italic_ru.gif" />
+    <Content Include="umbraco\Images\Editor\italic_tw.gif" />
+    <Content Include="umbraco\Images\Editor\justifycenter.gif" />
+    <Content Include="umbraco\Images\Editor\justifyfull.gif" />
+    <Content Include="umbraco\Images\Editor\justifyleft.gif" />
+    <Content Include="umbraco\Images\Editor\justifyright.gif" />
+    <Content Include="umbraco\Images\Editor\left.GIF" />
+    <Content Include="umbraco\Images\Editor\Link.GIF" />
+    <Content Include="umbraco\Images\Editor\Lock.GIF" />
+    <Content Include="umbraco\Images\Editor\masterpageContent.gif" />
+    <Content Include="umbraco\Images\Editor\masterpagePlaceHolder.gif" />
+    <Content Include="umbraco\Images\Editor\media.gif" />
+    <Content Include="umbraco\Images\Editor\menu_check.gif" />
+    <Content Include="umbraco\Images\Editor\mrgcell.GIF" />
+    <Content Include="umbraco\Images\Editor\newdoc.GIF" />
+    <Content Include="umbraco\Images\Editor\newdocument.gif" />
+    <Content Include="umbraco\Images\Editor\numlist.GIF" />
+    <Content Include="umbraco\Images\Editor\opacity.png" />
+    <Content Include="umbraco\Images\Editor\Open.GIF" />
+    <Content Include="umbraco\Images\Editor\outdent.gif" />
+    <Content Include="umbraco\Images\Editor\Paste.GIF" />
+    <Content Include="umbraco\Images\Editor\project.GIF" />
+    <Content Include="umbraco\Images\Editor\properties.gif" />
+    <Content Include="umbraco\Images\Editor\propertiesNew.gif" />
+    <Content Include="umbraco\Images\Editor\props.GIF" />
+    <Content Include="umbraco\Images\Editor\Redo.GIF" />
+    <Content Include="umbraco\Images\Editor\rel.gif" />
+    <Content Include="umbraco\Images\Editor\removeformat.gif" />
+    <Content Include="umbraco\Images\Editor\right.GIF" />
+    <Content Include="umbraco\Images\Editor\Save.GIF" />
+    <Content Include="umbraco\Images\Editor\SaveAndPublish.gif" />
+    <Content Include="umbraco\Images\Editor\SaveAndPublish.png" />
+    <Content Include="umbraco\Images\Editor\SaveToPublish.gif" />
+    <Content Include="umbraco\Images\Editor\saveToPublish.png" />
+    <Content Include="umbraco\Images\Editor\separator.gif" />
+    <Content Include="umbraco\Images\Editor\showStyles.gif" />
+    <Content Include="umbraco\Images\Editor\showStyles.png" />
+    <Content Include="umbraco\Images\Editor\skin.gif" />
+    <Content Include="umbraco\Images\Editor\spacer.gif" />
+    <Content Include="umbraco\Images\Editor\spellchecker.gif" />
+    <Content Include="umbraco\Images\Editor\split.gif" />
+    <Content Include="umbraco\Images\Editor\spltcell.GIF" />
+    <Content Include="umbraco\Images\Editor\statusbar_resize.gif" />
+    <Content Include="umbraco\Images\Editor\strikethrough.gif" />
+    <Content Include="umbraco\Images\Editor\styleMarkEnd.gif" />
+    <Content Include="umbraco\Images\Editor\styleMarkStart.gif" />
+    <Content Include="umbraco\Images\Editor\sub.gif" />
+    <Content Include="umbraco\Images\Editor\sup.gif" />
+    <Content Include="umbraco\Images\Editor\table.gif" />
+    <Content Include="umbraco\Images\Editor\TaskList.GIF" />
+    <Content Include="umbraco\Images\Editor\umbracoField.gif" />
+    <Content Include="umbraco\Images\Editor\umbracoScriptlet.gif" />
+    <Content Include="umbraco\Images\Editor\umbracoTextGen.gif" />
+    <Content Include="umbraco\Images\Editor\under.GIF" />
+    <Content Include="umbraco\Images\Editor\underline.gif" />
+    <Content Include="umbraco\Images\Editor\underline_es.gif" />
+    <Content Include="umbraco\Images\Editor\underline_fr.gif" />
+    <Content Include="umbraco\Images\Editor\underline_ru.gif" />
+    <Content Include="umbraco\Images\Editor\underline_tw.gif" />
+    <Content Include="umbraco\Images\Editor\Undo.GIF" />
+    <Content Include="umbraco\Images\Editor\unlink.gif" />
+    <Content Include="umbraco\Images\Editor\upload.png" />
+    <Content Include="umbraco\Images\Editor\vis.gif" />
+    <Content Include="umbraco\Images\Editor\visualaid.gif" />
+    <Content Include="umbraco\Images\Editor\xslVisualize.gif" />
+    <Content Include="umbraco\Images\Editor\zoom.gif" />
+    <Content Include="umbraco\Images\errorLayerBackground.gif" />
+    <Content Include="umbraco\Images\expand.png" />
+    <Content Include="umbraco\Images\exportDocumenttype.png" />
+    <Content Include="umbraco\Images\false.png" />
+    <Content Include="umbraco\Images\file.png" />
+    <Content Include="umbraco\Images\find.small.png" />
+    <Content Include="umbraco\Images\findDocument.gif" />
+    <Content Include="umbraco\Images\findDocument.png" />
+    <Content Include="umbraco\Images\folder.small.png" />
+    <Content Include="umbraco\Images\foldericon.png" />
+    <Content Include="umbraco\Images\forward.png" />
+    <Content Include="umbraco\Images\gradientBackground.png" />
+    <Content Include="umbraco\Images\gradientLine.gif" />
+    <Content Include="umbraco\Images\help.gif" />
+    <Content Include="umbraco\Images\help.png" />
+    <Content Include="umbraco\Images\htmldoc.small.png" />
+    <Content Include="umbraco\Images\importDocumenttype.png" />
+    <Content Include="umbraco\Images\information.png" />
+    <Content Include="umbraco\Images\listItemOrange.gif" />
+    <Content Include="umbraco\Images\Lminus.png" />
+    <Content Include="umbraco\Images\loginBg.png" />
+    <Content Include="umbraco\Images\logout.png" />
+    <Content Include="umbraco\Images\logout_small.gif" />
+    <Content Include="umbraco\Images\logout_small.png" />
+    <Content Include="umbraco\Images\Lplus.png" />
+    <Content Include="umbraco\Images\macro.gif" />
+    <Content Include="umbraco\Images\nada.gif" />
+    <Content Include="umbraco\Images\new.gif" />
+    <Content Include="umbraco\Images\new.png" />
+    <Content Include="umbraco\Images\newStar.gif" />
+    <Content Include="umbraco\Images\notepad.png" />
+    <Content Include="umbraco\Images\notify.gif" />
+    <Content Include="umbraco\Images\notifyOld.gif" />
+    <Content Include="umbraco\Images\okLayerBackground.gif" />
+    <Content Include="umbraco\Images\openfoldericon.png" />
+    <Content Include="umbraco\Images\options.small.png" />
+    <Content Include="umbraco\Images\package.png" />
+    <Content Include="umbraco\Images\package2.png" />
+    <Content Include="umbraco\Images\paste.small.png" />
+    <Content Include="umbraco\Images\pencil.png" />
+    <Content Include="umbraco\Images\permission.gif" />
+    <Content Include="umbraco\Images\permission.png" />
+    <Content Include="umbraco\Images\protect.gif" />
+    <Content Include="umbraco\Images\protect.png" />
+    <Content Include="umbraco\Images\publish.gif" />
+    <Content Include="umbraco\Images\publish.png" />
+    <Content Include="umbraco\Images\refresh.png" />
+    <Content Include="umbraco\Images\rollback.gif" />
+    <Content Include="umbraco\Images\rollback.png" />
+    <Content Include="umbraco\Images\save.png" />
+    <Content Include="umbraco\Images\sendToTranslate.png" />
+    <Content Include="umbraco\Images\small_minus.png" />
+    <Content Include="umbraco\Images\small_plus.png" />
+    <Content Include="umbraco\Images\sort.gif" />
+    <Content Include="umbraco\Images\sort.png" />
+    <Content Include="umbraco\Images\sort.small.png" />
+    <Content Include="umbraco\Images\SpeechBubble\error.gif" />
+    <Content Include="umbraco\Images\SpeechBubble\error.png" />
+    <Content Include="umbraco\Images\SpeechBubble\info.gif" />
+    <Content Include="umbraco\Images\SpeechBubble\info.png" />
+    <Content Include="umbraco\Images\SpeechBubble\save.gif" />
+    <Content Include="umbraco\Images\SpeechBubble\save.png" />
+    <Content Include="umbraco\Images\SpeechBubble\speechbubble.gif" />
+    <Content Include="umbraco\Images\SpeechBubble\speechbubble.png" />
+    <Content Include="umbraco\Images\SpeechBubble\speechbubbleShadow.png" />
+    <Content Include="umbraco\Images\SpeechBubble\speechbubbleShadowNew.gif" />
+    <Content Include="umbraco\Images\SpeechBubble\speechbubble_body.png" />
+    <Content Include="umbraco\Images\SpeechBubble\speechbubble_bottom.png" />
+    <Content Include="umbraco\Images\SpeechBubble\speechbubble_close.gif" />
+    <Content Include="umbraco\Images\SpeechBubble\speechbubble_close_over.gif" />
+    <Content Include="umbraco\Images\SpeechBubble\speechbubble_shadow.gif" />
+    <Content Include="umbraco\Images\SpeechBubble\speechbubble_top.png" />
+    <Content Include="umbraco\Images\SpeechBubble\success.png" />
+    <Content Include="umbraco\Images\SpeechBubble\warning.png" />
+    <Content Include="umbraco\Images\T.png" />
+    <Content Include="umbraco\Images\throbber.gif" />
+    <Content Include="umbraco\Images\Thumbnails\developer.png" />
+    <Content Include="umbraco\Images\Thumbnails\doc.png" />
+    <Content Include="umbraco\Images\Thumbnails\docWithImage.png" />
+    <Content Include="umbraco\Images\Thumbnails\folder.png" />
+    <Content Include="umbraco\Images\Thumbnails\folder_media.png" />
+    <Content Include="umbraco\Images\Thumbnails\mediaFile.png" />
+    <Content Include="umbraco\Images\Thumbnails\mediaPhoto.png" />
+    <Content Include="umbraco\Images\Thumbnails\member.png" />
+    <Content Include="umbraco\Images\Thumbnails\memberGroup.png" />
+    <Content Include="umbraco\Images\Thumbnails\members.png" />
+    <Content Include="umbraco\Images\Thumbnails\template.png" />
+    <Content Include="umbraco\Images\Thumbnails\xml.png" />
+    <Content Include="umbraco\Images\thumbs_lrg.png" />
+    <Content Include="umbraco\Images\thumbs_med.png" />
+    <Content Include="umbraco\Images\thumbs_smll.png" />
+    <Content Include="umbraco\Images\Tminus.png" />
+    <Content Include="umbraco\Images\toggleTreeOff.png" />
+    <Content Include="umbraco\Images\toggleTreeOn.png" />
+    <Content Include="umbraco\Images\topGradient.gif" />
+    <Content Include="umbraco\Images\Tplus.png" />
+    <Content Include="umbraco\Images\Tray\traySprites.png" />
+    <Content Include="umbraco\Images\true.png" />
+    <Content Include="umbraco\Images\umbracoSplash.png" />
+    <Content Include="umbraco\Images\Umbraco\bin.png" />
+    <Content Include="umbraco\Images\Umbraco\bin_closed.png" />
+    <Content Include="umbraco\Images\Umbraco\bin_empty.png" />
+    <Content Include="umbraco\Images\Umbraco\developerCacheItem.gif" />
+    <Content Include="umbraco\Images\Umbraco\developerCacheTypes.gif" />
+    <Content Include="umbraco\Images\Umbraco\developerDatatype.gif" />
+    <Content Include="umbraco\Images\Umbraco\developerMacro.gif" />
+    <Content Include="umbraco\Images\Umbraco\developerPython.gif" />
+    <Content Include="umbraco\Images\Umbraco\developerRegistry.gif" />
+    <Content Include="umbraco\Images\Umbraco\developerRegistryItem.gif" />
+    <Content Include="umbraco\Images\Umbraco\developerRuby.gif" />
+    <Content Include="umbraco\Images\Umbraco\developerScript.gif" />
+    <Content Include="umbraco\Images\Umbraco\developerXslt.gif" />
+    <Content Include="umbraco\Images\Umbraco\doc.gif" />
+    <Content Include="umbraco\Images\Umbraco\doc2.gif" />
+    <Content Include="umbraco\Images\Umbraco\doc3.gif" />
+    <Content Include="umbraco\Images\Umbraco\doc4.gif" />
+    <Content Include="umbraco\Images\Umbraco\doc5.gif" />
+    <Content Include="umbraco\Images\Umbraco\docPic.gif" />
+    <Content Include="umbraco\Images\Umbraco\folder.gif" />
+    <Content Include="umbraco\Images\Umbraco\folder_o.gif" />
+    <Content Include="umbraco\Images\Umbraco\mediaFile.gif" />
+    <Content Include="umbraco\Images\Umbraco\mediaMovie.gif" />
+    <Content Include="umbraco\Images\Umbraco\mediaMulti.gif" />
+    <Content Include="umbraco\Images\Umbraco\mediaPhoto.gif" />
+    <Content Include="umbraco\Images\Umbraco\member.gif" />
+    <Content Include="umbraco\Images\Umbraco\memberGroup.gif" />
+    <Content Include="umbraco\Images\Umbraco\memberType.gif" />
+    <Content Include="umbraco\Images\Umbraco\newsletter.gif" />
+    <Content Include="umbraco\Images\Umbraco\nitros.gif" />
+    <Content Include="umbraco\Images\Umbraco\package.gif" />
+    <Content Include="umbraco\Images\Umbraco\package.png" />
+    <Content Include="umbraco\Images\Umbraco\repository.gif" />
+    <Content Include="umbraco\Images\Umbraco\settingAgent.gif" />
+    <Content Include="umbraco\Images\Umbraco\settingCss.gif" />
+    <Content Include="umbraco\Images\Umbraco\settingCssItem.gif" />
+    <Content Include="umbraco\Images\Umbraco\settingDatatype.gif" />
+    <Content Include="umbraco\Images\Umbraco\settingDataTypeChild.gif" />
+    <Content Include="umbraco\Images\Umbraco\settingDomain.gif" />
+    <Content Include="umbraco\Images\Umbraco\settingLanguage.gif" />
+    <Content Include="umbraco\Images\Umbraco\settingMasterDatatype.gif" />
+    <Content Include="umbraco\Images\Umbraco\settingMasterTemplate.gif" />
+    <Content Include="umbraco\Images\Umbraco\settingSkin.gif" />
+    <Content Include="umbraco\Images\Umbraco\settingsScript.gif" />
+    <Content Include="umbraco\Images\Umbraco\settingTemplate.gif" />
+    <Content Include="umbraco\Images\Umbraco\settingView.gif" />
+    <Content Include="umbraco\Images\Umbraco\settingXML.gif" />
+    <Content Include="umbraco\Images\Umbraco\sprites.png" />
+    <Content Include="umbraco\Images\Umbraco\sprites_ie6.gif" />
+    <Content Include="umbraco\Images\Umbraco\statistik.gif" />
+    <Content Include="umbraco\Images\Umbraco\uploadpackage.gif" />
+    <Content Include="umbraco\Images\Umbraco\user.gif" />
+    <Content Include="umbraco\Images\Umbraco\userGroup.gif" />
+    <Content Include="umbraco\Images\Umbraco\userType.gif" />
+    <Content Include="umbraco\Js\dualSelectBox.js" />
+    <Content Include="umbraco\Js\guiFunctions.js" />
+    <Content Include="umbraco\Js\language.aspx" />
+    <Content Include="umbraco\Js\umbracoCheckKeys.js" />
+    <Content Include="umbraco\Js\UmbracoSpeechBubble.js" />
+    <Content Include="umbraco\Js\UmbracoSpeechBubbleBackEnd.js" />
+    <Content Include="umbraco\Js\UmbracoSpeechBubbleInit.js" />
+    <Content Include="umbraco\Js\umbracoUpgradeChecker.js" />
+    <Content Include="umbraco\Js\xmlextras.js" />
+    <Content Include="umbraco\Js\xmlRequest.js" />
+    <Content Include="umbraco\LiveEditing\Controls\Communicator.js" />
+    <Content Include="umbraco\LiveEditing\Controls\LiveEditingToolbar.js" />
+    <Content Include="umbraco\LiveEditing\Css\LiveEditing.css" />
+    <Content Include="umbraco\LiveEditing\Images\canvas.gif" />
+    <Content Include="umbraco\LiveEditing\Images\dialog_background.png" />
+    <Content Include="umbraco\LiveEditing\Modules\CreateModule\create.png" />
+    <Content Include="umbraco\LiveEditing\Modules\CreateModule\CreateModule.js" />
+    <Content Include="umbraco\LiveEditing\Modules\DeleteModule\delete.png" />
+    <Content Include="umbraco\LiveEditing\Modules\DeleteModule\DeleteModule.js" />
+    <Content Include="umbraco\LiveEditing\Modules\ItemEditing\ItemEditing.js" />
+    <Content Include="umbraco\LiveEditing\Modules\ItemEditing\ItemEditingInvoke.js" />
+    <Content Include="umbraco\LiveEditing\Modules\MacroModule\MacroModule.js" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\CssParser.aspx" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\Images\loader.gif" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\Images\module.gif" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\Images\skin.gif" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\ImageUploader.aspx" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\Js\disableInstallButtonsOnClick.js" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\Js\initcolorpicker.js" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\Js\initslider.js" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\Js\ModuleInjection.js" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\Js\SkinModuleShowOnStartup.js" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\ModuleInjectionMacroRenderer.aspx" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\ModuleInjector.aspx" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\ModuleInstaller.aspx" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\ModuleSelector.ascx" />
+    <Content Include="umbraco\LiveEditing\Modules\SkinModule\SkinCustomizer.ascx" />
+    <Content Include="umbraco\LiveEditing\Modules\UnpublishModule\unpublish.png" />
+    <Content Include="umbraco\LiveEditing\Modules\UnpublishModule\UnpublishModule.js" />
+    <Content Include="umbraco\login.aspx" />
+    <Content Include="umbraco\logout.aspx" />
+    <Content Include="umbraco\macroResultWrapper.aspx" />
+    <Content Include="umbraco\Members\EditMember.aspx" />
+    <Content Include="umbraco\Members\EditMemberGroup.aspx" />
+    <Content Include="umbraco\Members\EditMemberType.aspx" />
+    <Content Include="umbraco\Members\MemberSearch.ascx" />
+    <Content Include="umbraco\Members\search.aspx" />
+    <Content Include="umbraco\Members\ViewMembers.aspx" />
+    <Content Include="umbraco\ping.aspx" />
+    <Content Include="umbraco\Plugins\Tinymce3\InsertAnchor.aspx" />
+    <Content Include="umbraco\Plugins\Tinymce3\insertChar.aspx" />
+    <Content Include="umbraco\Plugins\Tinymce3\insertImage.aspx" />
+    <Content Include="umbraco\Plugins\Tinymce3\insertLink.aspx" />
+    <Content Include="umbraco\Plugins\Tinymce3\insertMacro.aspx" />
+    <Content Include="umbraco\Plugins\Tinymce3\tinymce3tinymceCompress.aspx" />
+    <Content Include="umbraco\Plugins\uComponents\uComponentsInstaller.ascx" />
+    <Content Include="umbraco\Plugins\UGoLive\cog.png" />
+    <Content Include="umbraco\Plugins\UGoLive\cross.png" />
+    <Content Include="umbraco\Plugins\UGoLive\Dashboard.ascx" />
+    <Content Include="umbraco\Plugins\UGoLive\Dashboard.css" />
+    <Content Include="umbraco\Plugins\UGoLive\Dashboard.js" />
+    <Content Include="umbraco\Plugins\UGoLive\error.png" />
+    <Content Include="umbraco\Plugins\UGoLive\help.png" />
+    <Content Include="umbraco\Plugins\UGoLive\icon.png" />
+    <Content Include="umbraco\Plugins\UGoLive\jquery.tmpl.js" />
+    <Content Include="umbraco\Plugins\UGoLive\knockout-1.2.1.js" />
+    <Content Include="umbraco\Plugins\UGoLive\run.png" />
+    <Content Include="umbraco\Plugins\UGoLive\throbber.gif" />
+    <Content Include="umbraco\Plugins\UGoLive\tick.png" />
+    <Content Include="umbraco\publishStatus.aspx" />
+    <Content Include="umbraco\Search\QuickSearch.ascx" />
+    <Content Include="umbraco\Search\quickSearch.js" />
+    <Content Include="umbraco\Settings\DictionaryItemList.aspx" />
+    <Content Include="umbraco\Settings\EditDictionaryItem.aspx" />
+    <Content Include="umbraco\Settings\editLanguage.aspx" />
+    <Content Include="umbraco\Settings\EditMediaType.aspx" />
+    <Content Include="umbraco\Settings\EditNodeTypeNew.aspx" />
+    <Content Include="umbraco\Settings\editTemplate.aspx" />
+    <Content Include="umbraco\Settings\Modals\ShowUmbracoTags.aspx" />
+    <Content Include="umbraco\Settings\Scripts\editScript.aspx" />
+    <Content Include="umbraco\Settings\Stylesheet\editstylesheet.aspx" />
+    <Content Include="umbraco\Settings\Stylesheet\Property\EditStyleSheetProperty.aspx" />
+    <Content Include="umbraco\Settings\Views\EditView.aspx" />
+    <Content Include="umbraco\Translation\default.aspx" />
+    <Content Include="umbraco\Translation\details.aspx" />
+    <Content Include="umbraco\Translation\preview.aspx" />
+    <Content Include="umbraco\Translation\xml.aspx" />
+    <Content Include="umbraco\tree.aspx" />
+    <Content Include="umbraco\treeInit.aspx" />
+    <Content Include="umbraco\umbraco.aspx" />
+    <Content Include="umbraco\Users\EditUser.aspx" />
+    <Content Include="umbraco\Users\EditUserType.aspx" />
+    <Content Include="umbraco\Users\NodePermissions.ascx" />
+    <Content Include="umbraco\Users\PermissionEditor.aspx" />
+    <Content Include="umbraco\Users\PermissionsEditor.js" />
+    <Content Include="umbraco\Users\PermissionsHandler.asmx" />
+    <Content Include="umbraco\webService.asmx" />
+    <Content Include="umbraco\Webservices\ajax.js" />
+    <Content Include="umbraco\Webservices\CacheRefresher.asmx" />
+    <Content Include="umbraco\Webservices\CheckForUpgrade.asmx" />
+    <Content Include="umbraco\Webservices\CMSNode.asmx" />
+    <Content Include="umbraco\Webservices\codeEditorSave.asmx" />
+    <Content Include="umbraco\Webservices\Developer.asmx" />
+    <Content Include="umbraco\Webservices\legacyAjaxCalls.asmx" />
+    <Content Include="umbraco\Webservices\MacroContainerService.asmx" />
+    <Content Include="umbraco\Webservices\nodeSorter.asmx" />
+    <Content Include="umbraco\Webservices\progressStatus.asmx" />
+    <Content Include="umbraco\Webservices\publication.asmx" />
+    <Content Include="umbraco\Webservices\Settings.asmx" />
+    <Content Include="umbraco\Webservices\templates.asmx" />
+    <Content Include="umbraco\Webservices\trashcan.asmx" />
+    <Content Include="umbraco\Webservices\TreeClientService.asmx" />
+    <Content Include="umbraco\Webservices\wsdl.xslt" />
+    <Content Include="umbraco\Xslt\macroGetCurrent.xsl" />
+    <Content Include="umbraco\Xslt\macroGetSubs.xsl" />
+    <Content Include="umbraco\Xslt\searchResult.xslt" />
+    <Content Include="umbraco\Xslt\sqlNodeHierachy.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Breadcrumb.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Clean.xslt" />
+    <Content Include="umbraco\Xslt\Templates\ListSubPagesAsThumbnails.xslt" />
+    <Content Include="umbraco\Xslt\Templates\ListSubPagesByDateAndLimit.xslt" />
+    <Content Include="umbraco\Xslt\Templates\ListSubPagesByDocumentType.xslt" />
+    <Content Include="umbraco\Xslt\Templates\ListSubPagesByLevel.xslt" />
+    <Content Include="umbraco\Xslt\Templates\ListSubPagesFromAChangableSource.xslt" />
+    <Content Include="umbraco\Xslt\Templates\ListSubPagesFromCurrentPage.xslt" />
+    <Content Include="umbraco\Xslt\Templates\ListThumbnailsFromCurrentPage.xslt" />
+    <Content Include="umbraco\Xslt\Templates\ListWholeStructureFromCurrentPage.xslt" />
+    <Content Include="umbraco\Xslt\Templates\NavigationPrototype.xslt" />
+    <Content Include="umbraco\Xslt\Templates\RelatedLinks.xslt" />
+    <Content Include="umbraco\Xslt\Templates\RSSFeed.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\Breadcrumb.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\Clean.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\ListSubPagesAsThumbnails.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\ListSubPagesByDateAndLimit.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\ListSubPagesByDocumentType.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\ListSubPagesByLevel.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\ListSubPagesFromAChangableSource.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\ListSubPagesFromCurrentPage.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\ListThumbnailsFromCurrentPage.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\ListWholeStructureFromCurrentPage.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\NavigationPrototype.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\RelatedLinks.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\RSSFeed.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\Sitemap.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Schema2\TablePrototype.xslt" />
+    <Content Include="umbraco\Xslt\Templates\Sitemap.xslt" />
+    <Content Include="umbraco\Xslt\Templates\TablePrototype.xslt" />
+    <Content Include="usercontrols\dummy.txt" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CasesController.cs" />
+    <Compile Include="Models\Case.cs" />
+    <Compile Include="Models\CasesResultView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Views\Web.config" />
+    <Content Include="config\xsltExtensions.config" />
+    <Content Include="config\UrlRewriting.config" />
+    <Content Include="config\umbracoSettings.config" />
+    <Content Include="config\trees.config" />
+    <Content Include="config\tinyMceConfig.config" />
+    <Content Include="config\Skinning.config" />
+    <Content Include="config\scripting.config" />
+    <Content Include="config\restExtensions.config" />
+    <Content Include="config\metablogConfig.config" />
+    <Content Include="config\log4net.config" />
+    <Content Include="config\FileSystemProviders.config" />
+    <Content Include="config\feedProxy.config" />
+    <Content Include="config\ExamineSettings.config" />
+    <Content Include="config\ExamineIndex.config" />
+    <Content Include="config\EmbeddedMedia.config" />
+    <Content Include="config\Dashboard.config" />
+    <Content Include="config\ClientDependency.config" />
+    <Content Include="config\BaseRestExtensions.config" />
+    <Content Include="config\applications.config" />
+    <Content Include="config\404handlers.config" />
+    <Content Include="bin\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <Content Include="bin\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <Content Include="umbraco\Dashboard\Air\DesktopMediaUploader.air" />
+    <Content Include="umbraco\Masterpages\default.Master" />
+    <Content Include="umbraco\Masterpages\umbracoDialog.Master" />
+    <Content Include="umbraco\Masterpages\umbracoPage.Master" />
+    <Content Include="umbraco\Scripting\templates\cshtml\Breadcrumb.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\EmptyTemplate.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\Gallery.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\ListAncestorsFromCurrentPage.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\ListChildPagesFromChangeableSource.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\ListChildPagesFromCurrentPage.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\ListChildPagesOrderedByDate.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\ListChildPagesOrderedByName.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\ListChildPagesOrderedByProperty.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\ListChildPagesWithDoctype.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\ListDescendantsFromCurrentPage.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\ListImagesFromMediaFolder.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\MultinodeTree-picker.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\Navigation.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\SiteMap.cshtml" />
+    <Content Include="umbraco\Scripting\templates\cshtml\TwitterFeed.cshtml" />
+    <Content Include="umbraco\Search\QuickSearchHandler.ashx" />
+    <Content Include="umbraco\Webservices\MediaUploader.ashx" />
+    <Content Include="umbraco\Webservices\TagsAutoCompleteHandler.ashx" />
+    <Content Include="umbraco\Webservices\TreeDataService.ashx" />
+    <Content Include="umbraco\Webservices\UltimatePickerAutoCompleteHandler.ashx" />
+    <Content Include="umbraco\Xslt\Web.config" />
+    <Content Include="Views\Case.cshtml" />
+    <Content Include="Views\Cases.cshtml" />
+    <Content Include="Views\Forside.cshtml" />
+    <Content Include="Views\Partials\isotopeViewCases.cshtml" />
+    <Content Include="Views\Underside.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Partials\renderImages.cshtml" />
+    <Content Include="Views\Partials\navigation.cshtml" />
+    <None Include="Properties\PublishProfiles\Test.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\MacroPartials\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52107</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49181/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

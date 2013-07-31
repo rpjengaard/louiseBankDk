@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "Shared/_Layout.cshtml";
+}
+<h1>@CurrentPage.Name</h1>
+    
+<h3>@Umbraco.Field("teaser")</h3>
+<p>
+    <p class="images">
+        @Html.Partial("renderImages", Model.Content)
+    </p>
+    <p class="mainText">
+        @Umbraco.Field("content")
+    </p>
+</p>

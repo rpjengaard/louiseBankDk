@@ -1,0 +1,30 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<IPublishedContent>
+@using Eksponent.CropUp;
+
+@{
+    if (Model.HasValue("images"))
+    {
+        var images = new List<Media>();
+
+        var arrMediaId = Model.GetPropertyValue("images").ToString().Split(',');
+
+        var cropUpSize = new ImageSizeArguments {Width = 980, CropMode = CropUpMode.BestFit, Zoom = true};
+    
+
+        foreach (var mediaId in arrMediaId)
+        {
+            var imageUrl = "";
+
+            if (!string.IsNullOrEmpty(mediaId))
+            {
+                imageUrl = Convert.ToInt32(mediaId) > 0 ? Umbraco.Media(mediaId).Url : "";
+            }
+
+            if (!string.IsNullOrEmpty(imageUrl))
+            {
+                imageUrl = CropUp.GetUrl("~" + imageUrl, cropUpSize);
+                <p><img src="@imageUrl" /></p>        
+            }
+        }    
+    }
+}
