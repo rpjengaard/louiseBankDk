@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{A9C5DE40-BE75-4E1E-B505-F813F5E4DD01}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "louiseBank", "web\louiseBank.csproj", "{4D1B0066-5F04-4862-ACC0-EFF647F66DFB}"
 EndProject
 Global
