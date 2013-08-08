@@ -22,6 +22,8 @@ www/App_Data/umbraco.config
 *.user
 *.DS_Store
 
+*/bin/louiseBank.dll
+
 # Resharpener
 *_ReSharper*
 
