@@ -37,7 +37,7 @@ namespace louiseBank.Controllers
         }
 
 
-        private Case GetCaseFromUmbracoNode(INode customerCase)
+        private Case2 GetCaseFromUmbracoNode(INode customerCase)
         {
             //laver cropUp imageUrl
             var imageId = customerCase.GetProperty("images").Value.Split(',').Where(x => string.IsNullOrEmpty(x) == false).Select(x => int.Parse(x)).FirstOrDefault();
