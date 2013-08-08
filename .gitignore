@@ -1,0 +1,76 @@
+#
+# Offroadcode's Mercurial Ignore file
+# visit /blog/2012/4/5/mercurial-ignore-file-for-umbraco/ for updates/additions
+# Thanks!
+#
+
+##### File globs to match ####
+syntax: glob
+# Data folders/files
+*/ExamineIndexes/*
+www/App_Data/umbraco.config
+*/App_Browsers/*
+*/App_Data/TEMP/*
+*/App_Data/Logs/*
+*/_systemUmbracoIndexDontDelete/*
+
+# Dll's and related C# crud
+*/bin/Debug/*
+*/obj/Debug/*
+*/obj/*
+*.pdb
+*.user
+*.DS_Store
+
+# Resharpener
+*_ReSharper*
+
+# ImageGen
+*/Cached/*
+www/media/*/Cached/
+
+# Misc crud
+*.orig
+*/Thumbs.db
+*/log.txt
+
+# For safety's sake
+web.config
+
+# Visual Studio goodies taken from (http://stackoverflow.com/questions/4095696/mercurial-hgignore-for-visual-studio-2010-projects)
+*.obj
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.scc
+#[Bb]in
+[Dd]ebug*/
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]humbs.db
+[Tt]est[Rr]esult*
+[Bb]uild[Ll]og.*
+*.[Pp]ublish.xml
+*.resharper
+
+###### Regular Expression matches #####
+dev/0000xx.web/App_Data/Logs/UmbracoTraceLog.txt.*
+dev/0000xx.web/App_Data/preview/*.config
+syntax: regexp
+# None yet!
