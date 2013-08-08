@@ -69,8 +69,4 @@ _ReSharper*/
 *.[Pp]ublish.xml
 *.resharper
 
-###### Regular Expression matches #####
-dev/0000xx.web/App_Data/Logs/UmbracoTraceLog.txt.*
-dev/0000xx.web/App_Data/preview/*.config
-syntax: regexp
 # None yet!
