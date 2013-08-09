@@ -1006,5 +1006,9 @@
  
   <Target Name="DeployStage">
 	<Message Text="Deployscript kommer her...." Importance="Low" />
+	<Copy
+              SourceFiles="."
+              DestinationFolder="c:\deploy\louiseBankDk"
+      />
   </Target>
 </Project>
