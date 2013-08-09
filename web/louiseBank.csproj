@@ -1010,4 +1010,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Target Name="DeployStage">
+	<Message Text="Deployscript kommer her...." Importance="Low" />
+  </Target>
 </Project>
