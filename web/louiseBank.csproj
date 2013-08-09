@@ -1005,14 +1005,14 @@
   </ProjectExtensions>
  
  <ItemGroup>
-      <Compile Include=".\**\*.*" /> 
+      <CopyItems Include="$(TargetDir)\*.*" /> 
    </ItemGroup>
  
   <Target Name="DeployStage">
 	<Message Text="Deployscript kommer her...." Importance="Low" />
 	<Copy
-              SourceFiles="@(Compile)"
-              DestinationFolder="c:\deploy\louiseBankDk\%(RecursiveDir)"
+              SourceFiles="@(CopyItems)"
+              DestinationFolder="c:\deploy\louiseBankDk\"
       />
   </Target>
 </Project>
