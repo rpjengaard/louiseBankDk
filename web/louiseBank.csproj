@@ -1005,7 +1005,7 @@
   </ProjectExtensions>
  
  <ItemGroup>
-      <CopyItems Include="$(TargetDir)\*.*" /> 
+      <CopyItems Include="$(ProjectDir)\*.*" /> 
    </ItemGroup>
  
   <Target Name="DeployStage">
