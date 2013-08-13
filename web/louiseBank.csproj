@@ -1010,9 +1010,6 @@
  
   <Target Name="DeployStage">
 	<Message Text="Deployscript kommer her...." Importance="Low" />
-	<Copy
-              SourceFiles="@(CopyItems)"
-              DestinationFolder="c:\deploy\louiseBankDk\"
-      />
+	xcopy "$(ProjectDir)config\*.config" "c:\deploy\louiseBankDk\" /y /m /s
   </Target>
 </Project>
